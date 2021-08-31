@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Giải phương bậc 1 (ax+b=0) </h2>
+@using (Html.BeginForm())
+{
+    <label>Số thứ nhất: </label>
+    <input type="text" name="soA" />
+    <label>Số thứ hai: </label>
+    <input type="text" name="soB" />
+    <input type="submit" value="kết quả" />
+}
+<label>nghiệm của phương trình là: @ViewBag.KetQua</label>
