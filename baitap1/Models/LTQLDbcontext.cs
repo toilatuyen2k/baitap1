@@ -12,7 +12,19 @@ namespace baitap1.Models
         {
         }
         public virtual DbSet<Account> Account { get; set; }
-       
+
+        private DbSet<Student> student;
+
+        public virtual DbSet<Student> GetStudent()
+        {
+            return student;
+        }
+
+        public virtual void SetStudent(DbSet<Student> value)
+        {
+            student = value;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
